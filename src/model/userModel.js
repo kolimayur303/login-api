@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   }
-
+  
 });
 
 userSchema.set('toJSON', {
