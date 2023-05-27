@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken'); 
-const SECRET_KEY = "mayurkoli@@@@#$890"
+const jwt = require('jsonwebtoken');
+const SECRET_KEY = "Mayurkoli@@###()=663grwbfub8rhrbu)";
 
 const auth = (req, res, next)=>{
 
@@ -22,13 +22,3 @@ const auth = (req, res, next)=>{
 }
 
 module.exports = {auth};
-
-
-// const authHeader = req.headers['authorization'];
-// const token = authHeader && authHeader.split(' ')[1];
-// if (token == null) return res.sendStatus(401);
-// jwt.verify(token, SECRET_KEY, (err, user) => {
-//     if (err) return res.sendStatus(403);
-//     req.user = user;
-//     next();
-// })

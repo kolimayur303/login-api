@@ -1,7 +1,7 @@
 const User = require("../model/userModel");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = "mayurkoli@@@@#$890"
+const SECRET_KEY = "Mayurkoli@@###()=663grwbfub8rhrbu)";
 
 // Register user
 const register = async (req, res) => {
