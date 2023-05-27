@@ -100,34 +100,6 @@ const valUserRegister = (req, res, next) => {
 const valUserLogin = (req, res, next) => {
 
 	const schema = {
-		First_name:{
-			exists:{
-				errorMessage: 'First_name must required'
-			},
-			trim:true,
-			notEmpty:{
-				errorMessage: 'First_name should not be empty',
-			},
-			isLength:{
-				options: { min:3, max:12 },
-				errorMessage: 'First_name must be contain 3 to 12 charecters',
-			},
-
-		},
-		Last_name:{
-			exists:{
-				errorMessage: 'Last_name must required'
-			},
-			trim:true,
-			notEmpty:{
-				errorMessage: 'Last_name should not be empty',
-			},
-			isLength:{
-				options: { min:3, max:12 },
-				errorMessage: 'Last_name must be contain 3 to 12 charecters',
-			},
-
-		},
 		email:{
 			exists:{
 				errorMessage: 'email must required'
