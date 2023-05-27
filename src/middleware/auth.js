@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = "Mayurkoli@@###()=663grwbfub8rhrbu)";
+require("dotenv").config();
 
 const auth = (req, res, next)=>{
 
@@ -7,7 +7,7 @@ const auth = (req, res, next)=>{
         let token = req.headers.authorization;
         if(token){
             token = token.split(' ')[1];
-            let user = jwt.verify(token,SECRET_KEY);
+            let user = jwt.verify(token,process.env.SECRET_KEY);
             req.userId = user.id;
            
         }else{
