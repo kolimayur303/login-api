@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
-    db:'mongodb://127.0.0.1:27017/user'
+    db:process.env.DB_URL
 }

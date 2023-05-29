@@ -14,13 +14,13 @@ const register = async (req, res) => {
         }
 
         const hashPassword = await bcrypt.hash(password, 10);
-
+       
         const result = await User.create({
             first_name: first_name,
             last_name: last_name,
             email: email,
             password: hashPassword
-        })
+        });
 
         const token = jwt.sign({email: result.email,id : result._id}, process.env.SECRET_KEY);
         res.status(201).json({user: result, token});
